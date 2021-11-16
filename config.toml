@@ -1,3 +1,109 @@
-baseURL = "https://confident-goldstine-1924c8.netlify.app/"
-languageCode = "ru-Ru"
-title = "Дарья Дымбрылова"
+baseURL = "https://example.com/"
+languageCode = "ru-RU"
+title = "Darya Dymbrylova"
+theme = "personal-web"
+copyright="© Darya Dymbrylova"
+googleAnalytics = ""
+enableEmoji=true
+enableRobotsTXT=true
+pygmentsUseClasses=true
+pygmentsCodeFences=true
+
+[params.intro]
+  main = "Дарья Дымбрылова"
+  sub = "технический писатель в Pravo.tech"
+
+[params.main]
+  latestPublishHeader = "My Latest Project"
+
+[taxonomies]
+  design = "designs"
+  tech = "techs"
+
+[blackfriday]
+  hrefTargetBlank = true
+
+[params]
+  breadcrumb = true
+  accentColor = "#CC33CC"
+  mainSections = ['portfolio'] # values: ['post', 'portfolio'] only accept one section, to be displayed bellow 404
+
+[params.notFound]
+  gopher = "/images/gopher.png" # checkout https://gopherize.me/
+  h1 = 'Сорри'
+  p = "Кажется, эта страница сломалась или еще не написана"
+
+[params.sections]
+  # Define how your sections will be called
+  # when automatically pulled. For instance in the 404 page
+  post = "article"
+  portfolio = "project"
+
+[params.sidebar]
+  backgroundImage = '/images/technicalw538.png' # header background image - default "/images/default_sidebar.jpg" - Photo by Tim Marshall on Unsplash
+  gradientOverlay = '' # default: rgba(0,0,0,0.4),rgba(0,0,0,0.4)
+  logo = "/images/d.darya.2.min.jpg" # - default "/images/edna-west.jpg"
+[params.assets]
+  favicon = "/images/favicon.png"
+  customCSS = ""
+
+[params.social]
+  github = "https://github.com/yusovadarya"
+  #twitter = "https://twitter.com/"
+  linkedin = "https://www.linkedin.com/feed/"
+  #medium = "https://medium.com/"
+  #codepen = "https://codepen.io/"
+  #facebook = "https://www.facebook.com/"
+  #youtube = "https://www.youtube.com/"
+  #instagram = "https://www.instagram.com/"
+  gitlab = "https://gitlab.com/d.dymbrylova"
+#  keybase = "https://keybase.io/"
+
+[params.contact]
+  email = ""
+  text= "" # text of the contact link in the sidebar. If email params.contact.email is defined
+
+
+[menu]
+
+[[menu.main]]
+  identifier = "about"
+  name = "Обо мне"
+  title = "About section"
+  url = "/about/"
+  weight = -120
+
+[[menu.main]]
+  identifier = "portfolio"
+  name = "Портфолио"
+  title = "Portfolio"
+  url = "/portfolio/"
+  weight = -100
+
+[[menu.main]]
+  identifier = "blog"
+  name = "Блог"
+  title = "Blog section"
+  url = "/post/"
+  weight = -110
+
+[sitemap]
+  changefreq = "monthly"
+  filename = "sitemap.xml"
+  priority = 0.5
+
+[privacy]
+  [privacy.googleAnalytics]
+    anonymizeIP = true
+    disable = true
+    respectDoNotTrack = true
+    useSessionStorage = false
+  [privacy.twitter]
+    disable = false
+    enableDNT = true
+    simple = false
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
